@@ -1,19 +1,13 @@
-//- doctype html
-//- html
-//- 	include common/_head
-//- 	body
-//- 		<!--[if lt IE 7]>
-//- 		<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-//- 		<![endif]-->
-//- 		//- include common/_mixins
-//- 		//- include common/_header
-//- 		//- include common/_products
-//- 		//- include common/_advantege
-//- 		//- include common/_delivery
-//- 		//- include common/_aboutus
-//- 		//- include common/_footer
-//- 		//- include pages/index
-//- 		//- include pages/product
+doctype html
+html
+	include common/_head
+	body
+		section.front__section
+			include ./common/header
 
-//- include pages/index
-include pages/product
+		section.product__section
+		section.delivery__section
+		section.contacts__section
+		footer.footer
+			p.footer__p Складская Техника
+			p.footer__p 2017 Все права защищены
