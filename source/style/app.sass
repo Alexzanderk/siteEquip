@@ -1,19 +1,9 @@
 @function rem($px)
 	@return $px / 16px + 0rem
 
-
-// @import '../../node_modules/breakpoint-sass/stylesheets/_breakpoint'
-// @import 'common/_varible'
-// @import 'common/_font'
-// @import 'common/_sprite'
-// @import 'common/_header'
-// @import 'common/_products'
-// @import 'common/_advantege'
-// @import 'common/_delivery'
-// @import 'common/_aboutus'
-// @import 'common/_footer'
-// @import 'common/_product_info'
-
+@import './common/_font'
+@import './../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss'
+@import './common/_varibles.sass'
 
 
 html, body
@@ -21,22 +11,39 @@ html, body
 
 html
 	font-size: 16px
-	// background-color: #000
-	// +breakpoint($ipad)
+	// +breakpoint($phone)
 	// 	font-size: 14px
-	// +breakpoint($iphone)
-		// font-size: 15px
 
-body
+*, body
 	margin: 0
 	padding: 0
-	position: relative
+	box-sizing: border-box
+	font-family: $mainFont
 	// lost-utility: edit
+
+.container
+	max-width: 1300px
+	margin: auto
+
+.section__h2
+	text-align: center
+	font-family: 'Days Sans Black'  
+	font-weight: 800
+
+body
 	display: flex
 	flex-flow: column
-body.lock 
-	overflow: hidden
-
-a[href^=tel]
-	color: #fff
-	text-decoration: none
+section
+	flex: 1
+footer
+	flex: 0
+@import './common/_section_front.sass'
+@import './common/_sprite.scss'
+@import './common/_section_product.sass'
+@import './common/_section_about.sass'
+@import './common/_section_contacts.sass'
+@import './common/_footer.sass'
+@import './common/_news-catalog.sass'
+@import './common/_news-tpl.sass'
+@import './common/_product-catalog-tpl.sass'
+@import './common/_product-tpl.sass'

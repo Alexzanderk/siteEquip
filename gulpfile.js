@@ -12,6 +12,8 @@ global.$ = {
   },
   gulp: require('gulp'),
   lost: require('lost'),
+  webpackStream: require('webpack-stream'),
+  webpack: require('webpack'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
@@ -27,7 +29,8 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'jade',
     'js.foundation',
-    'js.process',
+    'js.webpack',
+    // 'js.process',
     'copy.image',
     'copy.fonts',
     'css.foundation'
