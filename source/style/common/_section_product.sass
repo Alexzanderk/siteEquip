@@ -2,7 +2,7 @@
     padding: 25px 
     background-color: #fff
 
-.product__list__list
+.product-list__list
     margin-top: 20px
     margin-bottom: 15px
     list-style: none
@@ -14,18 +14,18 @@
     +breakpoint($phone)
         flex-flow: column
 
-.product__list__item
-    &.active>.product__list__link:before, &.active>.product__list__link:after
+.product-list__item
+    &.active>.product-list__link:before, &.active>.product-list__link:after
         opacity: 1
         transform: translateY(0px)
-    &.active>.product__list__link
+    &.active>.product-list__link
         color: $yellow
         
-.product__list__item
+.product-list__item
     flex: 1
     text-align: center
 
-.product__list__link
+.product-list__link
     width: 100%
     text-decoration: none
     color: #888

@@ -1,22 +1,9 @@
 .section__news-catalog
-    // background: linear-gradient(to bottom, rgba(0,0,0, .9) 0%, rgba(0,0,0,0.2) 30%, rgba(255,255,255,0) 100%), url('../img/bg_lift_truck.jpg')
-    // background-repeat: no-repeat
-    // background-size: cover
-    // background-position: 50% 85%
-    // height: auto
-    // position: relative
-    // z-index: -2
-.bg-fixed
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background: linear-gradient(to bottom, rgba(0,0,0, .9) 0%, rgba(0,0,0,0.2) 30%, rgba(255,255,255,0) 100%), url('../img/bg_lift_truck.jpg')
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: 50% 85%
-    z-index: -1
+	+breakpoint($phone)
+		background: url('../img/bg/ep_naturalblack.png')
+		background-attachment: none
+		background-size: auto
+        
 .news-catalog
 .news-catalog__list
     padding: 0
@@ -33,8 +20,10 @@
     margin: 10px
     position: relative
     display: flex
-    background-color: rgba(#010101, .85)
+    background-color: rgba(#010101, .35)
     color: #fff
+    +breakpoint($phone)
+        width: 100%
 
 .img-wrapper
     width: 35%

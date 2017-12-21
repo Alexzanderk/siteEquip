@@ -176,7 +176,6 @@
             event.stopPropagation();
 
             navigation.toggleClass('active');
-
         });
     };
 
@@ -421,4 +420,8 @@
             .siblings()
             .removeClass("active");
     });
+})();
+
+(function () {
+    
 })();

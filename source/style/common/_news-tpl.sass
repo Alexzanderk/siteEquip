@@ -1,9 +1,14 @@
+.section__news
+    @extend .section__news-catalog 
 .news
     background-color: rgba(#000, .75)
     color: #ffffff
     padding: 25px 15px
     overflow: hidden
     margin: 25px 0
+    +breakpoint($phone)
+        background-color: rgba(#000, .0)
+
 .news__h1
     color: #ddd
 

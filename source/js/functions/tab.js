@@ -1,29 +1,20 @@
 export const tab = (function () {
-    $(".product__list__link").on("click", function (e) {
-        e.preventDefault();
-
-        let item = $(this).closest(".product__list__item"),
-            contentItem = $(".catalog__item"),
-            itemPosition = item.index();
-
-        contentItem
-            .eq(itemPosition)
-            .add(item)
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-    });
-
-    // const tabButton = document.querySelectorAll('.product__list__link');
     
-    // function toggleTab(event) {
-    //     event.preventDefault();
+    function toggleTab(event) {
+        event.preventDefault();
 
-    //     let parent = Array.prototype.slice.call(this.parentNode.parentNode.children);
-    //     console.log(parent.indexOf(this));
-    // }
-
-    // tabButton.forEach(button => button.addEventListener('click', toggleTab));
-
-
+        const item = this.parentNode;
+        const itemAttribute = item.getAttribute('data-tab');
+        const itemsList = document.querySelectorAll('.catalog__item');
+        const itemList = Array.prototype.filter.call(itemsList, element => element.getAttribute('data-list') === itemAttribute);
+        
+        Array.prototype.slice.call(item.parentNode.children).forEach(element => element.classList.remove('active'));
+        item.classList.add('active');
+        
+        itemsList.forEach(element => element.classList.remove('active'));
+        itemList[0].classList.toggle('active');
+    }
+    
+    const tabButton = document.querySelectorAll('.product-list__link');
+    tabButton.forEach(button => button.addEventListener('click', toggleTab));
 })();

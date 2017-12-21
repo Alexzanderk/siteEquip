@@ -1,5 +1,6 @@
 .section__product-catalog
-
+    @extend .section__news-catalog
+    
 .product-catalog
     display: flex
     min-height: calc(100vh - 75px*2)
@@ -12,6 +13,8 @@
     margin: auto
     padding: 20px
     background-color: rgba(#000, .75)
+    +breakpoint($phone)
+        background-color: rgba(#000, .0)
 .product-catalog__item
     flex: 1
     display: flex

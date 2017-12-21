@@ -49,6 +49,7 @@
     position: fixed
     top: 25px
     right: 10px
+    z-index: 40
     +breakpoint($phone)
         display: block
 
@@ -58,14 +59,31 @@
     display: block
     margin: 4px 0
     background-color: #777
+    transition: all 0.3s ease
 
-.burger.open
-    .burger1
+.burger__link.open
+    z-index: 999
+    &>.burger1
         +breakpoint($phone)
-    .burger2
+            position: fixed
+            top: 30px
+            transform: rotate3D(0, -0, 25, 45deg)
+            transition: all 0.3s ease
+    &>.burger2
         +breakpoint($phone)
-    .burger3
+            position: fixed
+            top: 25px
+            display: none
+    &>.burger3
         +breakpoint($phone)
+            position: fixed
+            top: 30px
+            transform: rotate3D(0, -0, 25, -45deg)
+            transition: all 0.3s ease
+
+.burger__link.open + .nav__list
+    +breakpoint($phone)
+        display: block
 
 .nav__list
     padding: 0
@@ -85,7 +103,7 @@
         height: 100%
         z-index: 200
         text-align: center
-        display: none //! DELETE
+        display: none
 
 .nav__item
     margin-left: 35px
@@ -116,6 +134,7 @@
         padding: 10px
         &:first-child
             margin: 10px
+
 .nav__link
     font-size: 20px
     color: #fff
@@ -173,14 +192,12 @@
     text-decoration: none
     color: #fff
 
-
 .contact__form
 .form-request
     overflow: hidden
     display: flex
     flex-flow: row wrap
     flex-flow: column
-
 
 .form-request__input
     flex: 1
@@ -270,7 +287,6 @@
         background: $yellow
         top: 100%
         transition: opacity 0.2s
-
 
 .input__label-content_effect
     padding: 0
