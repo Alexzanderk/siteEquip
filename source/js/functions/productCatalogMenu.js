@@ -9,5 +9,5 @@ export const menuCatalog = (function() {
         leftSideMenu.classList.toggle('open');
     }
 
-    iconMenu.addEventListener('click', toggleMenu);
+    if (iconMenu != null) iconMenu.addEventListener('click', toggleMenu);
 })();
